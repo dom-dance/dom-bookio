@@ -1,0 +1,65 @@
+/* DOM Dance Centre × Bookio
+   FONT ONLY — no layout, color, spacing or component overrides
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+/* Base text */
+html,
+body,
+.service-widget {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Text and form elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+button,
+input,
+select,
+textarea,
+option,
+table,
+th,
+td {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Bookio text elements */
+.service-widget .step,
+.service-widget .name,
+.service-widget .title,
+.service-widget .price,
+.service-widget .description,
+.service-widget .facility-name,
+.service-widget .bank-name,
+.service-widget .select2-chosen,
+.navbar-bookio.widget .facility-name,
+.navbar-bookio.widget .navbar-item,
+.navbar-bookio.widget .navbar-info,
+.ui-datepicker,
+.ui-datepicker-title,
+.ui-datepicker-calendar {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Preserve known icon-font classes */
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+[class^="fa-"],
+[class*=" fa-"],
+.material-icons,
+.material-symbols-outlined,
+.material-symbols-rounded,
+.material-symbols-sharp {
+  font-family: inherit;
+}
