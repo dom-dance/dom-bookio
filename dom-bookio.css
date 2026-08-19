@@ -1,0 +1,424 @@
+/* =========================================================
+   DOM Dance Centre × Bookio
+   Custom widget stylesheet
+   Brand: #9B0621
+   Typeface: Outfit
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --dom-red: #9B0621;
+  --dom-red-dark: #681319;
+  --dom-red-soft: #F8EEF0;
+  --dom-text: #333334;
+  --dom-muted: #797979;
+  --dom-line: #E3E3E3;
+  --dom-bg: #FFFFFF;
+  --dom-soft: #F7F7F7;
+  --dom-radius: 12px;
+  --dom-radius-sm: 8px;
+}
+
+/* ---------- GLOBAL ---------- */
+
+html,
+body,
+.service-widget,
+.service-widget * {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+html,
+body {
+  background: var(--dom-bg) !important;
+  color: var(--dom-text) !important;
+}
+
+body {
+  font-size: 16px !important;
+}
+
+/* ---------- BOOKIO HEADER ---------- */
+
+.navbar-bookio.widget {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid var(--dom-line) !important;
+  box-shadow: none !important;
+}
+
+.navbar-bookio.widget .facility-name,
+.navbar-bookio.widget .navbar-item,
+.navbar-bookio.widget .navbar-info {
+  color: var(--dom-text) !important;
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+.navbar-bookio.widget .facility-name {
+  font-weight: 600 !important;
+}
+
+/* ---------- MAIN WIDGET ---------- */
+
+.service-widget {
+  background: #FFFFFF !important;
+  color: var(--dom-text) !important;
+}
+
+.service-widget .step {
+  color: var(--dom-red) !important;
+  font-weight: 600 !important;
+}
+
+/* Step lines */
+.service-widget .widget-categories .step-line,
+.service-widget .choose-service .step-line,
+.service-widget .choose-worker .step-line,
+.service-widget .choose-items .step-line,
+.service-widget .choose-terms .step-line,
+.service-widget .customer-request .step-line,
+.service-widget .date-time .choose-date-time .step-line,
+.service-widget .date-time .step-line-hour-1,
+.service-widget .participants-count .step-line,
+.service-widget .required-data .step-line,
+.service-widget .choose-addons .step-line {
+  border-color: var(--dom-red) !important;
+}
+
+.service-widget .widget-categories .step-line span.top-horizontal,
+.service-widget .widget-categories .step-line span.bottom-horizontal,
+.service-widget .choose-service .step-line span.bottom-horizontal,
+.service-widget .choose-worker .step-line span.bottom-horizontal,
+.service-widget .choose-terms .step-line span.bottom-horizontal,
+.service-widget .choose-items .step-line span.bottom-horizontal,
+.service-widget .required-data .step-line span.bottom-horizontal,
+.service-widget .choose-addons .step-line span.bottom-horizontal,
+.service-widget .customer-request .step-line span.bottom-horizontal,
+.service-widget .date-time .choose-date-time .step-line span.bottom-horizontal,
+.service-widget .participants-count .step-line span.bottom-horizontal {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+}
+
+/* ---------- CATEGORY CARDS ---------- */
+
+.service-widget .widget-categories .category .category {
+  background: var(--dom-red) !important;
+  border: 1px solid var(--dom-red) !important;
+  border-radius: var(--dom-radius) !important;
+  box-shadow: none !important;
+  transition: transform .15s ease, opacity .15s ease, background .15s ease;
+}
+
+.service-widget .widget-categories .category .category:hover {
+  opacity: .92 !important;
+  transform: translateY(-1px);
+}
+
+.service-widget .widget-categories .sub-categories .category .category {
+  background: #FFFFFF !important;
+  border: 1px solid var(--dom-red) !important;
+  border-radius: var(--dom-radius) !important;
+}
+
+.service-widget .widget-categories .sub-categories .category .category .white-text {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- SERVICES / WORKERS / TERMS ---------- */
+
+.service-widget .choose-service .widget-services .service,
+.service-widget .choose-worker .widget-workers .worker,
+.service-widget .choose-terms .widget-terms .term,
+.service-widget .participants-count .next-services .service {
+  border-radius: var(--dom-radius) !important;
+  border-color: var(--dom-line) !important;
+  box-shadow: none !important;
+  transition: border-color .15s ease, background .15s ease;
+}
+
+.service-widget .choose-service .widget-services .service:hover,
+.service-widget .choose-worker .widget-workers .worker:hover,
+.service-widget .choose-terms .widget-terms .term:hover,
+.service-widget .participants-count .next-services .service:hover {
+  border-color: var(--dom-red) !important;
+}
+
+.service-widget .choose-service .widget-services .service.selected,
+.service-widget .choose-worker .widget-workers .worker.selected,
+.service-widget .choose-terms .widget-terms .term.selected,
+.service-widget .participants-count .next-services .service.selected {
+  border-color: var(--dom-red) !important;
+  background: var(--dom-red-soft) !important;
+  color: var(--dom-red) !important;
+}
+
+.service-widget .choose-worker .widget-workers .worker .worker-item .name {
+  color: var(--dom-red) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- CALENDAR ---------- */
+
+.ui-calendar .ui-datepicker {
+  font-family: "Outfit", Arial, sans-serif !important;
+  border-radius: var(--dom-radius) !important;
+  border-color: var(--dom-line) !important;
+  box-shadow: none !important;
+}
+
+.ui-calendar .ui-datepicker .ui-datepicker-header {
+  background: #FFFFFF !important;
+  border: 0 !important;
+}
+
+.ui-calendar .ui-datepicker .ui-datepicker-title {
+  color: var(--dom-text) !important;
+  font-weight: 600 !important;
+}
+
+.ui-calendar .ui-datepicker .ui-datepicker-calendar thead {
+  color: var(--dom-red) !important;
+}
+
+.ui-calendar .ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
+.ui-calendar .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  color: var(--dom-red) !important;
+}
+
+.ui-calendar .ui-datepicker .ui-datepicker-calendar tbody tr td a {
+  border-radius: 8px !important;
+}
+
+.ui-calendar .ui-datepicker .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day a.ui-state-active {
+  background: var(--dom-red) !important;
+  color: #FFFFFF !important;
+  border-color: var(--dom-red) !important;
+}
+
+/* ---------- TIME SLOTS ---------- */
+
+.service-widget .date-time .choose-date-time .widget-time .titles .title {
+  background: var(--dom-red) !important;
+  color: #FFFFFF !important;
+  opacity: .5 !important;
+  border-radius: var(--dom-radius-sm) !important;
+}
+
+.service-widget .date-time .choose-date-time .widget-time .titles .title.selected {
+  background: var(--dom-red) !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
+.service-widget .date-time .choose-date-time .widget-time .times .title {
+  color: var(--dom-red) !important;
+  font-weight: 600 !important;
+}
+
+.service-widget .date-time .choose-date-time .widget-time .times .hours .hour {
+  border-radius: var(--dom-radius-sm) !important;
+  border-color: var(--dom-line) !important;
+  transition: border-color .15s ease, background .15s ease;
+}
+
+.service-widget .date-time .choose-date-time .widget-time .times .hours .hour:hover {
+  border-color: var(--dom-red) !important;
+}
+
+.service-widget .date-time .choose-date-time .widget-time .times .hours .hour.selected {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: #FFFFFF !important;
+}
+
+/* ---------- PERSONAL INFORMATION ---------- */
+
+.service-widget .personal-information input,
+.service-widget .personal-information textarea,
+.service-widget .personal-information select,
+.service-widget .customer-request input,
+.service-widget .customer-request textarea,
+.service-widget .required-data input,
+.service-widget .required-data textarea,
+.field-with-icon {
+  border-color: var(--dom-line) !important;
+  border-radius: var(--dom-radius-sm) !important;
+  box-shadow: none !important;
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+.service-widget input:focus,
+.service-widget textarea:focus,
+.service-widget select:focus {
+  border-color: var(--dom-red) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(155, 6, 33, .08) !important;
+}
+
+.service-widget .personal-information .information .customer-info.highlighted .icon,
+.service-widget .personal-information .information .course-participants .icon,
+.field-with-icon i:first-child {
+  color: var(--dom-red) !important;
+}
+
+.service-widget .personal-information .information .customer-info.highlighted .field input[type="text"],
+.service-widget .personal-information .information .select-count .select2-container .select2-choice {
+  border-color: var(--dom-red) !important;
+}
+
+/* ---------- RADIO BUTTONS ---------- */
+
+.radio-button-teal input[type="radio"] + label {
+  border-color: var(--dom-red) !important;
+}
+
+.radio-button-teal input[type="radio"]:checked + label:before {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+}
+
+/* ---------- SUMMARY ---------- */
+
+.service-widget .summary .summary-panel {
+  border-radius: var(--dom-radius) !important;
+  box-shadow: none !important;
+}
+
+.service-widget .summary .summary-panel .sum-panel .name,
+.service-widget .summary .summary-panel .sum-price .price {
+  color: var(--dom-red) !important;
+}
+
+.service-widget .summary .summary-panel .sum-price .price {
+  font-weight: 700 !important;
+}
+
+.service-widget .summary .summary-panel .pay-panel-payment .pay {
+  border-radius: var(--dom-radius-sm) !important;
+  border-color: var(--dom-line) !important;
+}
+
+.service-widget .summary .summary-panel .pay-panel-payment .pay.selected {
+  border-color: var(--dom-red) !important;
+}
+
+.service-widget .summary .summary-panel .pay-panel-payment .pay.selected .bank-name {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- PARTICIPANTS ---------- */
+
+.service-widget .participants-count .count-wrapper .service-info {
+  border-color: var(--dom-red) !important;
+  color: var(--dom-red) !important;
+}
+
+.service-widget .participants-count participants-count .p-count .counts .minus,
+.service-widget .participants-count participants-count .p-count .counts .plus {
+  background: var(--dom-red) !important;
+  color: #FFFFFF !important;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn-teal,
+footer .content .buttons .button#create-res,
+.service-widget .discount-coupon-apply {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: #FFFFFF !important;
+  border-radius: var(--dom-radius-sm) !important;
+  box-shadow: none !important;
+  font-family: "Outfit", Arial, sans-serif !important;
+  font-weight: 600 !important;
+  transition: background .15s ease, border-color .15s ease, opacity .15s ease;
+}
+
+.btn-teal:hover,
+footer .content .buttons .button#create-res:hover,
+.service-widget .discount-coupon-apply:hover:not(:disabled) {
+  background: var(--dom-red-dark) !important;
+  border-color: var(--dom-red-dark) !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
+footer .content .buttons .button#create-res.disabled,
+footer .content .buttons .button#create-res.disabled:hover {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: #FFFFFF !important;
+  opacity: .45 !important;
+}
+
+/* ---------- DISCOUNT COUPON ---------- */
+
+.service-widget .discount-coupon-icon {
+  background: var(--dom-red) !important;
+}
+
+.service-widget .discount-coupon-icon > i,
+.service-widget .discount-coupon-apply > span {
+  color: #FFFFFF !important;
+}
+
+/* ---------- LINKS ---------- */
+
+.service-widget a,
+.service-widget .gift-card-link a,
+.service-widget .confirmation .widget-wl-section {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- CONFIRMATION ---------- */
+
+.confirmation .buttons .btn-teal-invert {
+  background: #FFFFFF !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-red) !important;
+  border-radius: var(--dom-radius-sm) !important;
+}
+
+.confirmation .buttons .btn-teal-invert:hover {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: #FFFFFF !important;
+}
+
+/* ---------- LOADER ---------- */
+
+.loading-spinner .loader-wrapper .loader {
+  border-top-color: var(--dom-red) !important;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  background: #FFFFFF !important;
+  border-top-color: var(--dom-line) !important;
+}
+
+footer .content {
+  background: #FFFFFF !important;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px !important;
+  }
+
+  .service-widget .widget-categories .category .category,
+  .service-widget .choose-service .widget-services .service,
+  .service-widget .choose-worker .widget-workers .worker,
+  .service-widget .choose-terms .widget-terms .term {
+    border-radius: 10px !important;
+  }
+
+  .btn-teal,
+  footer .content .buttons .button#create-res {
+    min-height: 48px !important;
+  }
+}
