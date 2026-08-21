@@ -1,0 +1,82 @@
+/* DOM Dance Centre × Bookio
+   FONT ONLY v3 + smaller category card text
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+/* General Bookio text */
+body,
+.service-widget,
+.navbar-bookio.widget {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Most Bookio labels are DIV/SPAN elements */
+.service-widget div:not([class^="icon-"]):not([class*=" icon-"]),
+.service-widget span:not([class^="icon-"]):not([class*=" icon-"]):not(.material-icons):not(.material-symbols-outlined),
+.service-widget a:not([class^="icon-"]):not([class*=" icon-"]),
+.navbar-bookio.widget div:not([class^="icon-"]):not([class*=" icon-"]),
+.navbar-bookio.widget span:not([class^="icon-"]):not([class*=" icon-"]),
+.ui-calendar div,
+.ui-calendar span,
+.ui-datepicker,
+.ui-datepicker a,
+.ui-datepicker th,
+.ui-datepicker td {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Standard text/form elements */
+.service-widget h1,
+.service-widget h2,
+.service-widget h3,
+.service-widget h4,
+.service-widget h5,
+.service-widget h6,
+.service-widget p,
+.service-widget label,
+.service-widget button,
+.service-widget input,
+.service-widget select,
+.service-widget textarea,
+.service-widget option,
+.service-widget table,
+.service-widget th,
+.service-widget td {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Preserve icon-font elements */
+.service-widget i,
+.navbar-bookio.widget i,
+[class^="icon-"],
+[class*=" icon-"],
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+[class^="fa-"],
+[class*=" fa-"],
+.material-icons,
+.material-symbols-outlined,
+.material-symbols-rounded,
+.material-symbols-sharp {
+  /* intentionally no font-family override */
+}
+
+/* Smaller text inside category cards */
+.service-widget .widget-categories .category .category,
+.service-widget .widget-categories .category .category span,
+.service-widget .widget-categories .category .category .white-text {
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 768px) {
+  .service-widget .widget-categories .category .category,
+  .service-widget .widget-categories .category .category span,
+  .service-widget .widget-categories .category .category .white-text {
+    font-size: 16px !important;
+  }
+}
