@@ -1,0 +1,301 @@
+/* =========================================================
+   DOM Dance Centre × Bookio Calendar — Vue calendar v8
+   Final PrimeVue-aware brand override.
+   Uses exact Bookio selectors + PrimeVue primary tokens.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root,
+#app {
+  --dom-red: #9B0621;
+  --dom-red-dark: #7D051B;
+  --dom-red-deeper: #681319;
+  --dom-text: #111111;
+  --dom-white: #FFFFFF;
+
+  /* PrimeVue primary design tokens */
+  --p-primary-color: #9B0621 !important;
+  --p-primary-contrast-color: #FFFFFF !important;
+  --p-primary-hover-color: #7D051B !important;
+  --p-primary-active-color: #681319 !important;
+
+  /* Common PrimeVue component tokens */
+  --p-button-primary-background: #9B0621 !important;
+  --p-button-primary-border-color: #9B0621 !important;
+  --p-button-primary-color: #FFFFFF !important;
+  --p-button-primary-hover-background: #7D051B !important;
+  --p-button-primary-hover-border-color: #7D051B !important;
+  --p-button-primary-hover-color: #FFFFFF !important;
+  --p-button-primary-active-background: #681319 !important;
+  --p-button-primary-active-border-color: #681319 !important;
+
+  --p-checkbox-checked-background: #9B0621 !important;
+  --p-checkbox-checked-border-color: #9B0621 !important;
+  --p-checkbox-checked-hover-background: #7D051B !important;
+  --p-checkbox-checked-hover-border-color: #7D051B !important;
+
+  --p-radiobutton-checked-background: #9B0621 !important;
+  --p-radiobutton-checked-border-color: #9B0621 !important;
+
+  --p-togglebutton-checked-background: #FFFFFF !important;
+  --p-togglebutton-checked-color: #111111 !important;
+  --p-togglebutton-checked-border-color: transparent !important;
+
+  --p-badge-primary-background: #9B0621 !important;
+  --p-badge-primary-color: #FFFFFF !important;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+html,
+body,
+#app,
+#app button,
+#app input,
+#app select,
+#app textarea,
+#app label,
+#app a,
+#app div,
+#app span,
+#app p,
+#app h1,
+#app h2,
+#app h3,
+#app h4,
+#app h5,
+#app h6 {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+html,
+body,
+#app {
+  color: var(--dom-text);
+  background: var(--dom-white);
+}
+
+/* Preserve icon rendering */
+#app i,
+#app svg,
+#app [class*="icon"],
+#app [class*="Icon"],
+#app .material-icons,
+#app .material-symbols-outlined,
+#app .fa,
+#app .fas,
+#app .far,
+#app .fab {
+  font-family: initial;
+}
+
+/* ---------- HEADINGS ---------- */
+
+#app h1,
+#app h2,
+#app h3,
+#app h4 {
+  color: var(--dom-text) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- TODAY ---------- */
+/* Exact: button.p-button.p-component.today-button */
+
+#app button.today-button {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button.today-button *,
+#app button.today-button:hover * {
+  color: var(--dom-white) !important;
+}
+
+#app button.today-button:hover {
+  background: var(--dom-red-dark) !important;
+  border-color: var(--dom-red-dark) !important;
+}
+
+/* ---------- FILTER ---------- */
+/* Secondary / outlined appearance */
+
+#app button[class*="filter"],
+#app button[class*="Filter"] {
+  background: var(--dom-white) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-red) !important;
+}
+
+#app button[class*="filter"] *,
+#app button[class*="Filter"] * {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- SMALL PRIMARY CTA ---------- */
+/* Exact observed for "Nájsť najbližší termín" */
+
+#app button.p-button.p-component.p-button-sm {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button.p-button.p-component.p-button-sm * {
+  color: var(--dom-white) !important;
+}
+
+/* ---------- EVENT POPUP RESERVE ---------- */
+/* Exact: button.p-button.p-component.event-popup-reserve */
+
+#app button.event-popup-reserve {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button.event-popup-reserve * {
+  color: var(--dom-white) !important;
+}
+
+/* ---------- FULL-WIDTH PRIMARY ACTIONS ---------- */
+/* Exact: button.p-button.p-component.p-button-fluid
+   Used for filter confirm + final "Rezervovať termín"
+*/
+
+#app button.p-button.p-component.p-button-fluid {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button.p-button.p-component.p-button-fluid * {
+  color: var(--dom-white) !important;
+}
+
+/* ---------- PARTICIPANT BADGE ---------- */
+/* Exact:
+   span.p-badge.p-component.p-badge-circle.participant-number-badge
+*/
+
+#app .participant-number-badge {
+  background: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+/* ---------- PRIMEVUE CHECKBOXES ---------- */
+
+#app .p-checkbox.p-highlight .p-checkbox-box,
+#app .p-checkbox-checked .p-checkbox-box,
+#app .p-checkbox input:checked + .p-checkbox-box {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+}
+
+#app .p-checkbox.p-highlight .p-checkbox-icon,
+#app .p-checkbox-checked .p-checkbox-icon {
+  color: var(--dom-white) !important;
+}
+
+/* ---------- SELECTED WEEK-DAY NUMBER ----------
+   Bookio applies the orange primary background directly to
+   span.week-day-number only for the active/current date.
+   Restrict replacement to elements whose computed style is
+   represented through PrimeVue primary state where possible.
+*/
+
+#app .week-day-number[style*="#FFB719"],
+#app .week-day-number[style*="#ffb719"],
+#app .week-day-number[style*="rgb(255, 183, 25)"],
+#app .week-day-number[style*="rgb(255,183,25)"] {
+  background: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+/* ---------- GENERIC SOLID PRIME BUTTON FALLBACK ----------
+   Keeps unknown solid PrimeVue actions in DOM red,
+   while outlined/text buttons remain untouched.
+*/
+
+#app .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link) {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link):hover {
+  background: var(--dom-red-dark) !important;
+  border-color: var(--dom-red-dark) !important;
+}
+
+#app .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link) * {
+  color: var(--dom-white) !important;
+}
+
+/* Re-assert Filter secondary styling after generic button rule */
+#app button[class*="filter"],
+#app button[class*="Filter"] {
+  background: var(--dom-white) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-red) !important;
+}
+
+#app button[class*="filter"] *,
+#app button[class*="Filter"] * {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- FOCUS ---------- */
+
+#app button:focus-visible,
+#app input:focus,
+#app select:focus,
+#app textarea:focus {
+  outline-color: var(--dom-red) !important;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  #app input,
+  #app select,
+  #app textarea {
+    font-size: 16px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL CONTRAST FIXES
+   ========================================================= */
+
+/* Selected/current day number: white text on DOM red circle */
+#app .selected .week-day-number,
+#app .active .week-day-number,
+#app [aria-selected="true"] .week-day-number,
+#app [aria-current="date"] .week-day-number,
+#app [data-selected="true"] .week-day-number,
+#app .week-day-number.selected,
+#app .week-day-number.active {
+  color: #FFFFFF !important;
+}
+
+/* PrimeVue checkbox tick: white on DOM red background */
+#app .p-checkbox.p-highlight .p-checkbox-icon,
+#app .p-checkbox-checked .p-checkbox-icon,
+#app .p-checkbox-box[data-p-checked="true"] .p-checkbox-icon,
+#app .p-checkbox-box[aria-checked="true"] .p-checkbox-icon {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+/* SVG/polyline/path based checkbox icons */
+#app .p-checkbox.p-highlight .p-checkbox-icon *,
+#app .p-checkbox-checked .p-checkbox-icon *,
+#app .p-checkbox-box[data-p-checked="true"] .p-checkbox-icon *,
+#app .p-checkbox-box[aria-checked="true"] .p-checkbox-icon * {
+  stroke: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
