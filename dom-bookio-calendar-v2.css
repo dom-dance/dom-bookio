@@ -1,0 +1,185 @@
+/* =========================================================
+   DOM Dance Centre × Bookio Calendar — Vue calendar v2
+   Safe brand override: typography + colors only.
+   Does NOT change calendar structure, widths or heights.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --dom-red: #9B0621;
+  --dom-red-dark: #7D051B;
+  --dom-red-soft: #F7ECEF;
+  --dom-text: #111111;
+  --dom-muted: #6F7477;
+  --dom-line: #D9DDDE;
+  --dom-white: #FFFFFF;
+
+  /* Likely Bookio/Vue theme variables — harmless if unused */
+  --primary-color: #9B0621 !important;
+  --primary: #9B0621 !important;
+  --color-primary: #9B0621 !important;
+  --font-color: #111111 !important;
+  --text-color: #111111 !important;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+html,
+body,
+#app,
+#app button,
+#app input,
+#app select,
+#app textarea,
+#app label,
+#app a,
+#app div,
+#app span,
+#app p,
+#app h1,
+#app h2,
+#app h3,
+#app h4,
+#app h5,
+#app h6 {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Keep icon fonts intact */
+#app i,
+#app svg,
+#app [class*="icon"],
+#app [class*="Icon"],
+#app .material-icons,
+#app .material-symbols-outlined,
+#app .fa,
+#app .fas,
+#app .far,
+#app .fab {
+  font-family: initial;
+}
+
+html,
+body,
+#app {
+  color: var(--dom-text);
+  background: var(--dom-white);
+}
+
+/* ---------- HEADINGS ---------- */
+
+#app h1,
+#app h2,
+#app h3,
+#app h4 {
+  color: var(--dom-text) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- FORM CONTROLS / BUTTONS ---------- */
+
+#app button,
+#app input,
+#app select,
+#app textarea {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Keep Bookio geometry, only soften corners/shadows */
+#app button {
+  box-shadow: none !important;
+}
+
+/* ---------- BRAND PRIMARY STATES ----------
+   New Vue calendar uses Bookio's configured primary color (#FFB719).
+   These selectors catch common active/selected/primary controls without
+   changing the calendar layout.
+*/
+
+#app [aria-selected="true"],
+#app [aria-pressed="true"],
+#app [data-state="active"],
+#app [class~="active"],
+#app [class~="selected"],
+#app [class*="primary"] {
+  border-color: var(--dom-red) !important;
+}
+
+/* Buttons explicitly marked as active/selected/primary */
+#app button[aria-selected="true"],
+#app button[aria-pressed="true"],
+#app button[data-state="active"],
+#app button[class~="active"],
+#app button[class~="selected"],
+#app button[class*="primary"] {
+  background-color: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+/* ---------- LINKS ---------- */
+
+#app a {
+  color: inherit;
+}
+
+#app a:hover {
+  color: var(--dom-red);
+}
+
+/* ---------- TODAY / SELECTED DATE ----------
+   Covers typical Vue calendar class naming patterns.
+*/
+
+#app [class*="today"],
+#app [class*="Today"],
+#app [class*="current-day"],
+#app [class*="selected-day"],
+#app [class*="day--selected"],
+#app [class*="date--selected"] {
+  border-color: var(--dom-red) !important;
+}
+
+#app button[class*="today"],
+#app button[class*="Today"],
+#app button[class*="selected-day"],
+#app button[class*="day--selected"],
+#app button[class*="date--selected"] {
+  background-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+/* ---------- EVENTS / LESSONS ----------
+   Only applies when Bookio exposes semantic event/course classes.
+*/
+
+#app [class*="event"],
+#app [class*="Event"],
+#app [class*="course"],
+#app [class*="Course"],
+#app [class*="lesson"],
+#app [class*="Lesson"] {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* ---------- FOCUS ---------- */
+
+#app button:focus-visible,
+#app input:focus,
+#app select:focus,
+#app textarea:focus {
+  outline-color: var(--dom-red) !important;
+}
+
+/* ---------- MOBILE ----------
+   Prevent iPhone Safari zoom without resizing the rest of the calendar.
+*/
+
+@media (max-width: 768px) {
+  #app input,
+  #app select,
+  #app textarea {
+    font-size: 16px !important;
+  }
+}
