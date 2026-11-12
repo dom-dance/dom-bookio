@@ -1,0 +1,146 @@
+/* =========================================================
+   DOM Dance Centre × Bookio Calendar — Vue calendar v5
+   Safe version: v3 behavior + DOM-styled Filter.
+   Keeps selected date untouched to avoid layout issues.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --dom-red: #9B0621;
+  --dom-red-dark: #7D051B;
+  --dom-text: #111111;
+  --dom-muted: #6F7477;
+  --dom-white: #FFFFFF;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+html,
+body,
+#app {
+  font-family: "Outfit", Arial, sans-serif !important;
+  color: var(--dom-text);
+  background: var(--dom-white);
+}
+
+#app button,
+#app input,
+#app select,
+#app textarea,
+#app label,
+#app a,
+#app div,
+#app span,
+#app p,
+#app h1,
+#app h2,
+#app h3,
+#app h4,
+#app h5,
+#app h6 {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+/* Preserve icon rendering */
+#app i,
+#app svg,
+#app [class*="icon"],
+#app [class*="Icon"],
+#app .material-icons,
+#app .material-symbols-outlined,
+#app .fa,
+#app .fas,
+#app .far,
+#app .fab {
+  font-family: initial;
+}
+
+/* ---------- HEADINGS ---------- */
+
+#app h1,
+#app h2,
+#app h3,
+#app h4 {
+  color: var(--dom-text) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- KEEP SEGMENTED CONTROL SAFE ---------- */
+
+#app button *,
+#app [role="button"] * {
+  color: inherit;
+}
+
+/* ---------- BOOKIO PRIMARY COLOR REPLACEMENT ---------- */
+
+/* Generic inline Bookio orange -> DOM red */
+#app [style*="#FFB719"],
+#app [style*="#ffb719"],
+#app [style*="rgb(255, 183, 25)"],
+#app [style*="rgb(255,183,25)"] {
+  background-color: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+}
+
+#app [style*="border-color: rgb(255, 183, 25)"],
+#app [style*="border-color:rgb(255,183,25)"],
+#app [style*="border-color: #FFB719"],
+#app [style*="border-color:#FFB719"] {
+  border-color: var(--dom-red) !important;
+}
+
+#app [style*="color: rgb(255, 183, 25)"],
+#app [style*="color:rgb(255,183,25)"],
+#app [style*="color: #FFB719"],
+#app [style*="color:#FFB719"] {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- TODAY BUTTON ---------- */
+
+#app button[class*="today"],
+#app button[class*="Today"] {
+  background-color: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button[class*="today"] *,
+#app button[class*="Today"] * {
+  color: var(--dom-white) !important;
+}
+
+/* ---------- FILTER SECONDARY BUTTON ---------- */
+
+#app button[class*="filter"],
+#app button[class*="Filter"] {
+  background: var(--dom-white) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-red) !important;
+}
+
+#app button[class*="filter"] *,
+#app button[class*="Filter"] * {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- FOCUS ---------- */
+
+#app button:focus-visible,
+#app input:focus,
+#app select:focus,
+#app textarea:focus {
+  outline-color: var(--dom-red) !important;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  #app input,
+  #app select,
+  #app textarea {
+    font-size: 16px !important;
+  }
+}
