@@ -1,0 +1,138 @@
+/* =========================================================
+   DOM Dance Centre × Bookio Calendar — Vue calendar v6
+   Exact selectors for known Bookio controls.
+   Safe: no broad active/selected overrides.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --dom-red: #9B0621;
+  --dom-red-dark: #7D051B;
+  --dom-text: #111111;
+  --dom-white: #FFFFFF;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+html,
+body,
+#app,
+#app button,
+#app input,
+#app select,
+#app textarea,
+#app label,
+#app a,
+#app div,
+#app span,
+#app p,
+#app h1,
+#app h2,
+#app h3,
+#app h4,
+#app h5,
+#app h6 {
+  font-family: "Outfit", Arial, sans-serif !important;
+}
+
+html,
+body,
+#app {
+  color: var(--dom-text);
+  background: var(--dom-white);
+}
+
+/* Preserve icons */
+#app i,
+#app svg,
+#app [class*="icon"],
+#app [class*="Icon"],
+#app .material-icons,
+#app .material-symbols-outlined,
+#app .fa,
+#app .fas,
+#app .far,
+#app .fab {
+  font-family: initial;
+}
+
+/* ---------- TODAY ---------- */
+
+#app button.today-button {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button.today-button * {
+  color: var(--dom-white) !important;
+}
+
+#app button.today-button:hover {
+  background: var(--dom-red-dark) !important;
+  border-color: var(--dom-red-dark) !important;
+}
+
+/* ---------- FILTER ---------- */
+
+#app button[class*="filter"],
+#app button[class*="Filter"] {
+  background: var(--dom-white) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-red) !important;
+}
+
+#app button[class*="filter"] *,
+#app button[class*="Filter"] * {
+  color: var(--dom-red) !important;
+}
+
+/* ---------- "Nájsť najbližší termín" ----------
+   Exact class observed in Bookio:
+   button.p-button.p-component.p-button-sm
+*/
+
+#app button.p-button.p-component.p-button-sm {
+  background: var(--dom-red) !important;
+  border-color: var(--dom-red) !important;
+  color: var(--dom-white) !important;
+}
+
+#app button.p-button.p-component.p-button-sm * {
+  color: var(--dom-white) !important;
+}
+
+#app button.p-button.p-component.p-button-sm:hover {
+  background: var(--dom-red-dark) !important;
+  border-color: var(--dom-red-dark) !important;
+}
+
+/* ---------- HEADINGS ---------- */
+
+#app h1,
+#app h2,
+#app h3,
+#app h4 {
+  color: var(--dom-text) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- FOCUS ---------- */
+
+#app button:focus-visible,
+#app input:focus,
+#app select:focus,
+#app textarea:focus {
+  outline-color: var(--dom-red) !important;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  #app input,
+  #app select,
+  #app textarea {
+    font-size: 16px !important;
+  }
+}
